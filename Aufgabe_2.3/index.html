@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beschwerde an DHBW</title>
+    <script src="./script/main.js" defer></script>
+  </head>
+  <body>
+    <h1>Beschwerde</h1>
+    <p>
+      Hier können Sie ihre Beschwerde an die DHBW einreichen. Der Grund kann
+      dabei ganz individuell sein. Die Beschwerde wird anschließend von dem Bot
+      der DHBW bearbeitet und zum Schluss in die Ablage P archiviert.
+    </p>
+    <form id="form" action="action_page.php" method="post">
+      <fieldset>
+        <legend>Persönliche Daten</legend>
+        <label for="vorname">Vorname: </label>
+        <input type="text" id="vorname" name="vorname" placeholder="Vorname" />
+        <br />
+        <label for="nachname">Nachname: </label>
+        <input
+          type="text"
+          id="nachname"
+          name="nachname"
+          placeholder="Nachname"
+        />
+        <br />
+        <label for="matrikel">Matrikelnummer: </label>
+        <input
+          type="number"
+          id="matrikel"
+          name="matrikel"
+          placeholder="123456789"
+        />
+      </fieldset>
+      <p>
+        Hier können Sie sich am passenden DHBW Standort anmelden und sich
+        exmatrikulieren lassen.
+      </p>
+      <fieldset>
+        <legend>Anmeldedaten</legend>
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="me@domain.de"
+        />
+        <br />
+        <label for="password">Passwort: </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="1234"
+        />
+      </fieldset>
+      <p>Nähere Informationen zu Ihrer Beschwerde.</p>
+      <p>
+        Bitte suchen Sie erst nach einem ähnlichen Titel, sodass möglichst wenig
+        Duplikate entstehen.
+      </p>
+      <label for="search">Suche nach: </label>
+      <input type="search" id="search" name="search" />
+      <fieldset>
+        <legend>Tatbestand</legend>
+        <label for="title">Titel: </label>
+        <input type="text" id="title" name="title" />
+        <br />
+        <label for="date">Zeitpunkt: </label>
+        <input type="date" id="date" name="date" />
+        <br />
+        <p>In welchem Kurs fand die Tat statt?</p>
+        <label for="radio1">Programmieren in C</label>
+        <input type="radio" id="radio1" name="kurs" value="C" />
+        <label for="radio2">Programmieren in C</label>
+        <input type="radio" id="radio2" name="kurs" value="C" />
+        <br />
+        <label for="radio3">Programmieren in C</label>
+        <input type="radio" id="radio3" name="kurs" value="C" />
+        <label for="radio4">BWL</label>
+        <input type="radio" id="radio4" name="kurs" value="BWL" />
+        <br />
+        <label for="beschwerde">Beschwerde: </label>
+        <textarea
+          name="beschwerde"
+          id="beschwerde"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </fieldset>
+      <p>Eine kleine Spende - bitte. Der Mindestbetrag ist 499,99€</p>
+      <fieldset>
+        <legend>Kontodaten</legend>
+        <label for="iban">IBAN: </label>
+        <input type="text" id="iban" name="iban" placeholder="IBAN" required />
+        <br />
+        <label for="bic">BIC: </label>
+        <input type="text" id="bic" name="bic" placeholder="BIC" />
+      </fieldset>
+      <p>Ihr Feedback zu unserem Formular</p>
+      <label for="feedback">Feedback: </label>
+      <textarea name="feedback" id="feedback" cols="30" rows="10"> </textarea>
+      <br />
+      <p>Wie zufrieden sind Sie mit dem Formular?</p>
+      <label for="satisfied">Von 0 bis 100: </label>
+      <input type="range" id="satisfied" name="satisfied" />
+      <br />
+      <br />
+      <input
+        type="checkbox"
+        id="data_protection"
+        name="data_protection"
+        checked
+        disabled
+      />
+      <label for="data_protection"
+        >Ich habe die Datenschutzrechtlinien ignoriert und habe auch nicht vor,
+        diese zu lesen. Zusätzlich verkaufe ich hiermit meine Seele.</label
+      >
+      <br />
+      <br />
+      <button>Abschicken</button>
+      <button type="reset">Zurücksetzen</button>
+    </form>
+
+    <div id="output"></div>
+  </body>
+</html>
